@@ -1,27 +1,34 @@
 {
-  "name": "node-api",
-  "version": "1.0.0",
-  "description": "node api",
-  "main": "app.js",
+  "name": "nodejs-ex",
+  "version": "0.0.1",
+  "description": "Node.js sample app for OpenShift 3",
+  "main": "server.js",
   "dependencies": {
-    "body-parser": "^1.18.2",
-    "cookie-parser": "^1.4.3",
-    "express": "^4.16.2",
-    "multer": "^1.3.0"
+    "chai": "^3.5.0",
+    "chai-http": "^2.0.1",
+    "ejs": "^2.4.1",
+    "express": "^4.13.4",
+    "mocha": "^2.4.5",
+    "mongodb": "^2.1.16",
+    "morgan": "^1.7.0",
+    "object-assign": "4.1.0"
   },
-  "devDependencies": {},
+  "engine": {
+    "node": "*",
+    "npm": "*"
+  },
   "scripts": {
-    "start": "node app.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node server.js",
+    "test": "IP=0.0.0.0 PORT=3030 mocha --timeout 5000 tests/*_test.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Evando16/node-api.git"
+    "url": "http://github.com/openshift/nodejs-ex.git"
   },
-  "author": "EJ",
-  "license": "ISC",
+  "author": "Steve Speicher <sspeiche@gmail.com>",
+  "license": "CC-BY-1.0",
   "bugs": {
-    "url": "https://github.com/Evando16/node-api/issues"
+    "url": "http://github.com/openshift/nodejs-ex/issues"
   },
-  "homepage": "https://github.com/Evando16/node-api#readme"
+  "homepage": "http://github.com/openshift/nodejs-ex"
 }
